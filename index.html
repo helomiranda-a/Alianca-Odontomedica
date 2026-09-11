@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aliança Odontomédica | Clínica em Ipiaú - BA</title>
+<meta name="description" content="Aliança Odontomédica em Ipiaú, Bahia. Implantes dentários, ortodontia, endodontia, psicologia, fonoaudiologia e estética. Agende seu atendimento.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aliança Odontomédica | Clínica em Ipiaú - BA">
+<meta property="og:description" content="Odontologia, psicologia, fonoaudiologia e estética em um só lugar. Especialidade em destaque: Implantes Dentários. Atendimento em Ipiaú, Bahia.">
+<meta property="og:locale" content="pt_BR">
+<!-- Substituir pela imagem oficial de capa quando disponível -->
+<meta property="og:image" content="/images/og-cover.jpg">
+
+<!-- Favicon provisório (monograma). Substituir por /images/favicon.png com a marca oficial -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D332E'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23C8A45C' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Aliança Odontomédica",
+  "image": "/images/hero.jpg",
+  "telephone": "+557399238796",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Juraci Magalhães, 80 - Centro",
+    "addressLocality": "Ipiaú",
+    "addressRegion": "BA",
+    "postalCode": "45570-000",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "sameAs": ["https://www.instagram.com/aliancaodontomedica/"]
+}
+</script>
+
+<style>
+  /* =========================================================
+     ALIANÇA ODONTOMÉDICA — DESIGN TOKENS
+     ========================================================= */
+  :root{
+    --verde-950:#0A2925;
+    --verde-900:#0D332E;
+    --verde-800:#123F38;
+    --verde-700:#1C544A;
+    --verde-line: rgba(200,164,92,0.28);
+
+    --dourado:#C8A45C;
+    --dourado-forte:#B08A3E;
+    --dourado-claro:#E3CB9B;
+
+    --off-white:#F6F3EC;
+    --branco:#FFFFFF;
+    --cinza-100:#EEE9DE;
+    --cinza-300:#D9D2C1;
+
+    --grafite:#262620;
+    --grafite-suave:#57564C;
+
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --container: 1240px;
+    --gap-section: clamp(4.5rem, 9vw, 8rem);
+    --gap-inner: clamp(2rem, 5vw, 3.5rem);
+    --radius: 2px;
+    --ease: cubic-bezier(.4,0,.2,1);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--grafite);
+    background:var(--off-white);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  h1,h2,h3,h4{ font-family:var(--serif); font-weight:500; margin:0; color:inherit; line-height:1.12; }
+  p{ margin:0; }
+  button{ font-family:inherit; cursor:pointer; }
+  section{ scroll-margin-top:84px; }
+
+  :focus-visible{ outline:2px solid var(--dourado); outline-offset:3px; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  .container{ max-width:var(--container); margin:0 auto; padding:0 clamp(1.25rem, 5vw, 3rem); }
+  .visually-hidden{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+  .skip-link{
+    position:absolute; left:1rem; top:-60px; background:var(--dourado); color:var(--verde-950);
+    padding:.7rem 1.2rem; z-index:200; font-weight:600; transition:top .2s var(--ease); border-radius:var(--radius);
+  }
+  .skip-link:focus{ top:1rem; }
+
+  .eyebrow{
+    font-family:var(--serif); font-style:italic; font-weight:500;
+    color:var(--dourado); font-size:.95rem; letter-spacing:.02em;
+  }
+
+  .divider{
+    width:56px; height:1px; background:var(--dourado); border:0; margin:1.25rem 0;
+  }
+  .divider--center{ margin-left:auto; margin-right:auto; }
+
+  h2.section-title{
+    font-size:clamp(1.9rem, 3.1vw, 2.75rem);
+    color:var(--verde-950);
+    max-width:16ch;
+  }
+  section.on-dark h2.section-title{ color:var(--branco); }
+
+  .section-lede{
+    font-size:1.05rem; line-height:1.7; color:var(--grafite-suave); max-width:52ch;
+  }
+  section.on-dark .section-lede{ color:rgba(255,255,255,.82); }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+    padding:.95rem 1.9rem; font-size:.85rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+    border-radius:var(--radius); border:1px solid transparent; transition:transform .35s var(--ease), background .3s, color .3s, border-color .3s;
+    white-space:nowrap;
+  }
+  .btn svg{ width:16px; height:16px; flex:none; }
+  .btn-primary{ background:var(--dourado); color:var(--verde-950); }
+  .btn-primary:hover{ background:var(--dourado-claro); transform:translateY(-2px); }
+  .btn-outline{ border-color:rgba(255,255,255,.55); color:var(--branco); background:transparent; }
+  .btn-outline:hover{ border-color:var(--dourado); color:var(--dourado); transform:translateY(-2px); }
+  .btn-outline-dark{ border-color:var(--verde-800); color:var(--verde-950); background:transparent; }
+  .btn-outline-dark:hover{ border-color:var(--dourado-forte); color:var(--dourado-forte); transform:translateY(-2px); }
+  .btn-ghost{ color:var(--verde-950); border-bottom:1px solid var(--dourado); padding:.3rem 0; border-radius:0; text-transform:none; letter-spacing:0; font-size:.95rem; }
+  .btn-ghost:hover{ color:var(--dourado-forte); }
+
+  /* =========================================================
+     HEADER
+     ========================================================= */
+  .site-header{
+    position:sticky; top:0; z-index:100; width:100%;
+    background:transparent; transition:background .4s var(--ease), box-shadow .4s var(--ease), padding .3s var(--ease);
+    padding: 1.35rem 0;
+  }
+  .site-header.is-scrolled{
+    background:rgba(10,41,37,.94); backdrop-filter:blur(6px);
+    box-shadow:0 8px 28px rgba(0,0,0,.18); padding:.85rem 0;
+  }
+  .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+
+  .logo{ display:flex; align-items:center; gap:.6rem; flex:none; }
+  .logo-img{ display:none; height:40px; width:auto; }
+  .logo-text{ display:flex; flex-direction:column; line-height:1; color:var(--branco); }
+  .logo-text strong{ font-family:var(--serif); font-size:1.28rem; font-weight:500; letter-spacing:.01em; }
+  .logo-text em{ font-style:normal; font-size:.62rem; letter-spacing:.22em; color:var(--dourado); margin-top:.3rem; }
+
+  .main-nav{ display:none; }
+  .main-nav ul{ display:flex; gap:clamp(1.2rem,2.4vw,2.4rem); }
+  .main-nav a{
+    font-size:.92rem; color:rgba(255,255,255,.86); position:relative; padding:.3rem 0; transition:color .25s;
+  }
+  .main-nav a::after{
+    content:""; position:absolute; left:0; right:0; bottom:-2px; height:1px; background:var(--dourado);
+    transform:scaleX(0); transform-origin:left; transition:transform .3s var(--ease);
+  }
+  .main-nav a:hover{ color:var(--branco); }
+  .main-nav a:hover::after{ transform:scaleX(1); }
+
+  .header-cta{ display:none; }
+  .header-actions{ display:flex; align-items:center; gap:.9rem; }
+
+  .mobile-cta{
+    display:inline-flex; align-items:center; gap:.4rem; padding:.55rem .9rem; font-size:.72rem;
+    font-weight:600; letter-spacing:.05em; text-transform:uppercase; background:var(--dourado); color:var(--verde-950);
+    border-radius:var(--radius);
+  }
+  .mobile-cta svg{ width:14px; height:14px; }
+
+  .hamburger{
+    display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px;
+    width:42px; height:42px; background:transparent; border:1px solid rgba(255,255,255,.35); border-radius:var(--radius);
+  }
+  .hamburger span{ width:18px; height:1.5px; background:var(--branco); transition:transform .3s var(--ease), opacity .3s var(--ease); }
+  .hamburger[aria-expanded="true"] span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
+  .hamburger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .hamburger[aria-expanded="true"] span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
+
+  .mobile-panel{
+    position:fixed; inset:0; z-index:99; background:var(--verde-950);
+    display:flex; flex-direction:column; justify-content:center; padding:2rem clamp(1.5rem,7vw,3rem);
+    opacity:0; visibility:hidden; transform:translateY(-12px);
+    transition:opacity .35s var(--ease), transform .35s var(--ease), visibility .35s;
+  }
+  .mobile-panel.is-open{ opacity:1; visibility:visible; transform:translateY(0); }
+  .mobile-panel ul{ display:flex; flex-direction:column; gap:1.6rem; }
+  .mobile-panel a{ font-family:var(--serif); font-size:2rem; color:var(--branco); }
+  .mobile-panel a:hover{ color:var(--dourado); }
+  .mobile-panel .btn{ margin-top:2.4rem; align-self:flex-start; }
+
+  @media (min-width:960px){
+    .main-nav{ display:block; }
+    .header-cta{ display:inline-flex; }
+    .header-actions .hamburger, .header-actions .mobile-cta{ display:none; }
+  }
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+  .hero{
+    position:relative; background:linear-gradient(165deg, var(--verde-950) 0%, var(--verde-800) 100%);
+    color:var(--branco); padding-top:clamp(2.5rem,6vw,3.5rem); padding-bottom:clamp(3.5rem,7vw,5rem);
+    margin-top:-84px;
+  }
+  .hero-inner{
+    display:grid; grid-template-columns:1fr; gap:clamp(2.5rem,6vw,4rem); align-items:center;
+    padding-top:clamp(4.5rem,9vw,6rem);
+  }
+  .hero-copy h1{
+    font-size:clamp(2.15rem, 4.6vw, 3.6rem); margin-top:1.1rem; max-width:14ch;
+  }
+  .hero-copy .section-lede{ margin-top:1.5rem; max-width:44ch; color:rgba(255,255,255,.86); }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap:1rem; margin-top:2.4rem; }
+
+  .hero-media{ position:relative; }
+  .photo-frame{ position:relative; padding:14px 14px 0 0; }
+  .photo-frame::before{
+    content:""; position:absolute; top:0; right:0; width:88%; height:88%;
+    border:1px solid var(--dourado); z-index:0;
+  }
+  .photo{
+    position:relative; z-index:1; overflow:hidden; background:var(--verde-700); aspect-ratio:4/5;
+  }
+  .photo img{ width:100%; height:100%; object-fit:cover; }
+  .photo img.is-broken{ display:none; }
+  .photo-fallback{
+    display:none; position:absolute; inset:0; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; gap:.6rem; padding:1.5rem; background:
+      repeating-linear-gradient(135deg, rgba(200,164,92,.09) 0 12px, rgba(200,164,92,.02) 12px 24px), var(--verde-700);
+    border:1px dashed rgba(200,164,92,.5);
+  }
+  .photo img.is-broken + .photo-fallback{ display:flex; }
+  .photo-fallback svg{ width:30px; height:30px; color:var(--dourado); opacity:.85; }
+  .photo-fallback strong{ font-family:var(--sans); font-size:.72rem; letter-spacing:.04em; color:var(--dourado-claro); }
+  .photo-fallback span{ font-size:.72rem; color:rgba(255,255,255,.65); max-width:26ch; line-height:1.45; }
+  .photo-caption{
+    position:absolute; left:-14px; bottom:-14px; background:var(--branco); color:var(--verde-950);
+    padding:.85rem 1.1rem; max-width:220px; font-size:.82rem; line-height:1.4; z-index:2;
+    border-left:3px solid var(--dourado); box-shadow:0 14px 30px rgba(0,0,0,.18);
+  }
+
+  .scroll-cue{
+    display:none; align-items:center; gap:.6rem; margin-top:clamp(3rem,6vw,4.5rem); color:rgba(255,255,255,.55); font-size:.78rem;
+  }
+  .scroll-cue .line{ width:34px; height:1px; background:rgba(255,255,255,.4); }
+
+  @media (min-width:860px){
+    .hero-inner{ grid-template-columns:1.05fr .95fr; }
+    .scroll-cue{ display:flex; }
+  }
+
+  /* =========================================================
+     GENERIC SECTION
+     ========================================================= */
+  .section{ padding:var(--gap-section) 0; }
+  .section.on-dark{ background:var(--verde-950); color:var(--branco); }
+  .section.on-alt{ background:var(--cinza-100); }
+
+  .section-head{ max-width:640px; margin-bottom:var(--gap-inner); }
+  .section-head.centered{ margin-left:auto; margin-right:auto; text-align:center; }
+
+  /* =========================================================
+     APRESENTAÇÃO (A CLÍNICA)
+     ========================================================= */
+  .intro-grid{
+    display:grid; gap:clamp(2.5rem,6vw,4rem); grid-template-columns:1fr;
+  }
+  .intro-copy{ max-width:46ch; }
+  .intro-copy .section-lede{ margin-top:1.3rem; }
+
+  .pillars{
+    display:grid; grid-template-columns:1fr; border-top:1px solid var(--cinza-300);
+  }
+  .pillar{
+    display:flex; gap:1.1rem; align-items:flex-start; padding:1.7rem 0; border-bottom:1px solid var(--cinza-300);
+  }
+  .pillar-icon{
+    flex:none; width:40px; height:40px; border:1px solid var(--dourado); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; color:var(--dourado-forte);
+  }
+  .pillar-icon svg{ width:19px; height:19px; }
+  .pillar h3{ font-size:1.08rem; color:var(--verde-950); }
+  .pillar p{ margin-top:.35rem; font-size:.92rem; color:var(--grafite-suave); line-height:1.55; }
+
+  @media (min-width:860px){
+    .intro-grid{ grid-template-columns:.85fr 1.15fr; }
+    .pillars{ grid-template-columns:1fr 1fr; }
+    .pillar{ border-right:1px solid var(--cinza-300); padding-right:1.5rem; }
+    .pillar:nth-child(2n){ border-right:0; padding-left:1.5rem; }
+  }
+
+  /* =========================================================
+     ESPECIALIDADES
+     ========================================================= */
+  .specialty-lead{
+    display:grid; gap:clamp(2rem,5vw,3rem); grid-template-columns:1fr; align-items:stretch;
+    background:var(--branco); border:1px solid var(--cinza-300);
+  }
+  .specialty-lead-media{ position:relative; min-height:280px; }
+  .specialty-lead-media .photo{ aspect-ratio:auto; height:100%; min-height:280px; }
+  .specialty-lead-body{ padding:clamp(1.75rem,4vw,3rem); display:flex; flex-direction:column; justify-content:center; }
+  .badge{
+    display:inline-flex; align-self:flex-start; align-items:center; gap:.5rem; padding:.45rem .9rem;
+    border:1px solid var(--dourado); color:var(--dourado-forte); font-size:.72rem; font-weight:600;
+    letter-spacing:.05em; text-transform:uppercase; margin-bottom:1.1rem;
+  }
+  .specialty-lead-body h3{ font-size:clamp(1.4rem,2.4vw,1.9rem); color:var(--verde-950); }
+  .specialty-lead-body p{ margin-top:1rem; color:var(--grafite-suave); line-height:1.7; max-width:48ch; }
+
+  .treatment-list{ margin-top:1.6rem; display:grid; grid-template-columns:repeat(2,1fr); gap:.55rem 1.5rem; }
+  .treatment-list li{
+    font-size:.92rem; color:var(--grafite); padding-left:1.05rem; position:relative;
+  }
+  .treatment-list li::before{
+    content:""; position:absolute; left:0; top:.55em; width:6px; height:1px; background:var(--dourado-forte);
+  }
+  .treatment-list li.is-highlight{ color:var(--verde-950); font-weight:600; }
+
+  .specialty-row{
+    margin-top:clamp(2rem,4vw,2.8rem); display:grid; grid-template-columns:1fr; gap:0;
+    border:1px solid var(--cinza-300); border-top:0;
+  }
+  .specialty-col{
+    padding:clamp(1.6rem,3vw,2.2rem); border-top:1px solid var(--cinza-300); background:var(--branco);
+  }
+  .specialty-col h4{ font-size:1.15rem; color:var(--verde-950); display:flex; align-items:center; gap:.7rem; }
+  .specialty-col h4 svg{ width:20px; height:20px; color:var(--dourado-forte); flex:none; }
+  .specialty-col ul{ margin-top:1rem; display:flex; flex-direction:column; gap:.5rem; }
+  .specialty-col li{ font-size:.9rem; color:var(--grafite-suave); padding-left:1.05rem; position:relative; }
+  .specialty-col li::before{ content:""; position:absolute; left:0; top:.55em; width:6px; height:1px; background:var(--dourado-forte); }
+
+  @media (min-width:860px){
+    .specialty-lead{ grid-template-columns:1fr 1fr; }
+    .specialty-row{ grid-template-columns:repeat(3,1fr); }
+    .specialty-col{ border-top:0; border-left:1px solid var(--cinza-300); }
+    .specialty-col:first-child{ border-left:0; }
+  }
+
+  /* =========================================================
+     IMPLANTES (destaque)
+     ========================================================= */
+  .implants{
+    position:relative; background:linear-gradient(160deg, var(--verde-900), var(--verde-950));
+    overflow:hidden;
+  }
+  .implants-grid{ display:grid; grid-template-columns:1fr; gap:clamp(2.5rem,6vw,4rem); align-items:center; }
+  .implants-copy .divider{ margin-top:0; }
+  .implants-copy p{ margin-top:1.3rem; color:rgba(255,255,255,.85); line-height:1.75; max-width:50ch; }
+  .implants-copy .btn{ margin-top:2.2rem; }
+  .implants-media .photo{ aspect-ratio:1/1; }
+
+  @media (min-width:860px){
+    .implants-grid{ grid-template-columns:1.05fr .95fr; }
+  }
+
+  /* =========================================================
+     ESTRUTURA / GALERIA
+     ========================================================= */
+  .gallery{
+    display:grid; grid-template-columns:1fr 1fr; gap:.85rem;
+  }
+  .gallery .photo{ aspect-ratio:1/1; }
+  .gallery .g-tall{ grid-row:span 2; }
+  .gallery .g-tall .photo{ aspect-ratio:1/2.05; height:100%; }
+  .gallery .g-wide{ grid-column:span 2; }
+  .gallery .g-wide .photo{ aspect-ratio:2/1.1; }
+  .gallery figcaption{
+    margin-top:.55rem; font-size:.78rem; color:var(--grafite-suave); letter-spacing:.01em;
+  }
+
+  @media (min-width:700px){
+    .gallery{ grid-template-columns:repeat(4,1fr); }
+  }
+
+  [data-reveal]{ opacity:0; transform:translateY(22px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+  [data-reveal].is-visible{ opacity:1; transform:translateY(0); }
+
+  /* =========================================================
+     EQUIPE
+     ========================================================= */
+  .team-grid{
+    margin-top:var(--gap-inner); display:grid; grid-template-columns:1fr; gap:1.4rem;
+  }
+  .team-card{ background:var(--branco); border:1px solid var(--cinza-300); }
+  .team-card .photo{ aspect-ratio:1/1; }
+  .team-card-body{ padding:1.3rem 1.4rem 1.5rem; }
+  .team-card-body h3{ font-size:1.02rem; color:var(--verde-950); }
+  .team-card-body span{ display:block; margin-top:.3rem; font-size:.8rem; color:var(--dourado-forte); letter-spacing:.03em; }
+
+  @media (min-width:700px){ .team-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (min-width:1020px){ .team-grid{ grid-template-columns:repeat(4,1fr); } }
+
+  /* =========================================================
+     DEPOIMENTOS
+     ========================================================= */
+  .testimonial-grid{
+    margin-top:var(--gap-inner); display:grid; grid-template-columns:1fr; gap:1.2rem;
+  }
+  .testimonial-card{
+    border:1px dashed var(--cinza-300); padding:1.8rem; display:flex; flex-direction:column; gap:1rem;
+    background:var(--branco);
+  }
+  .testimonial-card svg{ width:22px; height:22px; color:var(--dourado); }
+  .testimonial-card p{ font-size:.92rem; color:var(--grafite-suave); line-height:1.6; }
+  .testimonial-card small{ font-size:.74rem; letter-spacing:.04em; color:var(--grafite-suave); text-transform:uppercase; }
+
+  @media (min-width:800px){ .testimonial-grid{ grid-template-columns:repeat(3,1fr); } }
+
+  /* =========================================================
+     INSTAGRAM
+     ========================================================= */
+  .insta-grid{
+    margin-top:var(--gap-inner); display:grid; grid-template-columns:repeat(3,1fr); gap:.6rem;
+  }
+  .insta-item{ position:relative; aspect-ratio:1/1; overflow:hidden; background:var(--verde-800); }
+  .insta-item .photo{ width:100%; height:100%; aspect-ratio:auto; }
+  .insta-item a{ position:absolute; inset:0; z-index:3; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .3s var(--ease); background:rgba(10,41,37,.55); }
+  .insta-item a svg{ width:24px; height:24px; color:var(--dourado); }
+  .insta-item:hover a{ opacity:1; }
+  .insta-cta{ margin-top:2.2rem; display:flex; flex-wrap:wrap; align-items:center; gap:1.2rem; }
+  .insta-handle{ font-family:var(--serif); font-size:1.05rem; }
+
+  @media (min-width:700px){ .insta-grid{ grid-template-columns:repeat(6,1fr); } }
+
+  /* =========================================================
+     LOCALIZAÇÃO
+     ========================================================= */
+  .location-grid{ display:grid; grid-template-columns:1fr; gap:clamp(2rem,5vw,3rem); }
+  .location-info{ display:flex; flex-direction:column; gap:1.5rem; }
+  .info-row{ display:flex; gap:1rem; align-items:flex-start; }
+  .info-row svg{ width:20px; height:20px; color:var(--dourado-forte); flex:none; margin-top:.2rem; }
+  .info-row strong{ display:block; font-size:.95rem; color:var(--verde-950); }
+  .info-row span{ display:block; margin-top:.2rem; font-size:.92rem; color:var(--grafite-suave); line-height:1.5; }
+  .map-frame{ border:1px solid var(--cinza-300); overflow:hidden; aspect-ratio:4/3; background:var(--cinza-100); }
+  .map-frame iframe{ width:100%; height:100%; border:0; filter:grayscale(.15) contrast(1.02); }
+
+  @media (min-width:900px){ .location-grid{ grid-template-columns:.9fr 1.1fr; } }
+
+  /* =========================================================
+     CONTATO FINAL
+     ========================================================= */
+  .contact-grid{ display:grid; grid-template-columns:1fr; gap:clamp(2.5rem,6vw,4rem); align-items:center; }
+  .contact-list{ margin-top:2rem; display:flex; flex-direction:column; gap:1.3rem; }
+  .contact-panel{
+    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.16); padding:clamp(1.8rem,4vw,2.6rem);
+  }
+  .contact-panel h3{ font-size:1.3rem; color:var(--branco); }
+  .contact-panel p{ margin-top:.8rem; color:rgba(255,255,255,.75); font-size:.92rem; line-height:1.6; }
+  .contact-panel .btn{ margin-top:1.8rem; width:100%; }
+
+  @media (min-width:900px){ .contact-grid{ grid-template-columns:1.1fr .9fr; } }
+
+  /* =========================================================
+     FOOTER
+     ========================================================= */
+  .site-footer{ background:var(--verde-950); color:rgba(255,255,255,.78); padding:clamp(3rem,6vw,4.5rem) 0 2rem; }
+  .footer-top{
+    display:grid; grid-template-columns:1fr; gap:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid rgba(255,255,255,.14);
+  }
+  .footer-brand strong{ font-family:var(--serif); font-size:1.4rem; color:var(--branco); display:block; }
+  .footer-brand p{ margin-top:.7rem; font-size:.86rem; color:var(--dourado-claro); letter-spacing:.02em; }
+  .footer-col h4{ font-family:var(--sans); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; color:var(--dourado); font-weight:600; }
+  .footer-col ul{ margin-top:1rem; display:flex; flex-direction:column; gap:.65rem; font-size:.9rem; }
+  .footer-col a:hover{ color:var(--branco); }
+  .footer-bottom{
+    padding-top:1.6rem; display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:space-between; font-size:.78rem; color:rgba(255,255,255,.5);
+  }
+
+  @media (min-width:700px){ .footer-top{ grid-template-columns:1.3fr repeat(3,1fr); } }
+
+  /* =========================================================
+     WHATSAPP FLUTUANTE
+     ========================================================= */
+  .wa-float{
+    position:fixed; right:clamp(1rem,4vw,2rem); bottom:clamp(1rem,4vw,2rem); z-index:80;
+    display:flex; align-items:center; gap:.7rem;
+  }
+  .wa-float .tooltip{
+    background:var(--verde-950); color:var(--branco); font-size:.8rem; padding:.55rem .9rem;
+    white-space:nowrap; opacity:0; transform:translateX(8px); transition:opacity .25s var(--ease), transform .25s var(--ease);
+    border-left:2px solid var(--dourado);
+  }
+  .wa-float:hover .tooltip, .wa-float:focus-within .tooltip{ opacity:1; transform:translateX(0); }
+  .wa-btn{
+    width:56px; height:56px; border-radius:50%; background:#1E7A5F; color:var(--branco);
+    display:flex; align-items:center; justify-content:center; box-shadow:0 10px 26px rgba(0,0,0,.28);
+    border:1px solid rgba(255,255,255,.18); transition:transform .3s var(--ease);
+  }
+  .wa-btn:hover{ transform:scale(1.06); }
+  .wa-btn svg{ width:27px; height:27px; }
+
+  @media (max-width:480px){
+    .wa-float .tooltip{ display:none; }
+  }
+</style>
+</head>
+<body>
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo" aria-label="Aliança Odontomédica — página inicial">
+      <!-- Logo oficial: ao publicar /images/logo.png, ele substitui automaticamente o logótipo em texto abaixo -->
+      <img src="/images/logo.png" alt="Aliança Odontomédica" class="logo-img"
+           onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+           onerror="this.style.display='none';">
+      <span class="logo-text">
+        <strong>Aliança</strong>
+        <em>ODONTOMÉDICA</em>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#clinica">A Clínica</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#estrutura">Estrutura</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary header-cta" href="https://wa.me/557399238796" target="_blank" rel="noopener">Agendar atendimento</a>
+
+      <a class="mobile-cta" href="https://wa.me/557399238796" target="_blank" rel="noopener" aria-label="Agendar atendimento pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M20 4l-8 8"/></svg>
+        Agendar
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <nav aria-label="Navegação móvel">
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#clinica">A Clínica</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#estrutura">Estrutura</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn-primary" href="https://wa.me/557399238796" target="_blank" rel="noopener">Agendar atendimento</a>
+</div>
+
+<main id="conteudo">
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+  <section class="hero" id="inicio">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Aliança Odontomédica</span>
+        <h1>Cuidado completo para o seu sorriso, sua saúde e seu bem-estar.</h1>
+        <p class="section-lede">Em Ipiaú, a Aliança Odontomédica reúne odontologia, psicologia, fonoaudiologia e estética em um só endereço — com especialidade em destaque para implantes dentários e atendimento pensado para o seu conforto em cada etapa.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://wa.me/557399238796" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M20 4l-8 8"/></svg>
+            Agendar atendimento
+          </a>
+          <a class="btn btn-outline" href="#clinica">Conhecer a clínica</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="photo-frame">
+          <figure class="photo">
+            <img src="/images/hero.jpg" alt="Recepção da Aliança Odontomédica em Ipiaú, Bahia" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+              <strong>/images/hero.jpg</strong>
+              <span>Espaço reservado para fotografia oficial da recepção — Instagram @aliancaodontomedica</span>
+            </div>
+          </figure>
+          <div class="photo-caption">Especialidade em destaque: Implantes Dentários</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="scroll-cue"><span class="line"></span> Role para conhecer a clínica</div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       APRESENTAÇÃO DA CLÍNICA
+       ========================================================= -->
+  <section class="section" id="clinica" aria-labelledby="clinica-title">
+    <div class="container intro-grid">
+      <div class="intro-copy" data-reveal>
+        <span class="eyebrow">A clínica</span>
+        <h2 class="section-title" id="clinica-title" style="margin-top:.8rem;">Um cuidado que vai além do sorriso.</h2>
+        <hr class="divider">
+        <p class="section-lede">A Aliança Odontomédica reúne, em um único espaço em Ipiaú, quatro frentes de cuidado com a saúde: odontologia, psicologia, fonoaudiologia e estética. A proposta é simples — acompanhar você em diferentes momentos da sua saúde e do seu bem-estar, sem precisar recorrer a vários endereços diferentes.</p>
+      </div>
+
+      <div class="pillars" data-reveal>
+        <div class="pillar">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-9.3-9C1.2 8.8 2.6 5 6.2 5c2 0 3.4 1.2 4 2.4.3-1 2-2.4 4-2.4 3.6 0 5 3.8 3.5 7C19.4 16.6 12 21 12 21z"/><path d="M9.5 9.5c1 2.5 3 4.5 3 4.5" opacity="0"/></svg>
+          </span>
+          <div>
+            <h3>Odontologia</h3>
+            <p>Da avaliação à reabilitação, com destaque para implantes dentários.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4a4 4 0 0 1 4 4v7a3 3 0 0 1-6 0"/><path d="M15 4a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4"/><circle cx="9" cy="18" r="1.4"/></svg>
+          </span>
+          <div>
+            <h3>Psicologia</h3>
+            <p>Atendimento psicológico com abordagem cognitivo-comportamental.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a4 4 0 0 1 4-4h1l3-3v14l-3-3H8a4 4 0 0 1-4-4z"/><path d="M16 9.5c1 .8 1 4.2 0 5"/><path d="M19 7.5c1.8 1.6 1.8 7.4 0 9"/></svg>
+          </span>
+          <div>
+            <h3>Fonoaudiologia</h3>
+            <p>Cuidado com a comunicação, a voz e a fala.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c2 2.5 4 5.2 4 8a4 4 0 1 1-8 0c0-2.8 2-5.5 4-8z"/></svg>
+          </span>
+          <div>
+            <h3>Estética</h3>
+            <p>Procedimentos como depilação LED e criolipólise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ESPECIALIDADES
+       ========================================================= -->
+  <section class="section on-alt" id="especialidades" aria-labelledby="esp-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Áreas de atuação</span>
+        <h2 class="section-title" id="esp-title" style="margin-top:.8rem;">Especialidades e tratamentos</h2>
+        <hr class="divider">
+      </div>
+
+      <div class="specialty-lead" data-reveal>
+        <div class="specialty-lead-media">
+          <figure class="photo" style="aspect-ratio:auto; height:100%;">
+            <img src="/images/implantes-consultorio.jpg" alt="Consultório odontológico da Aliança Odontomédica preparado para atendimento" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/></svg>
+              <strong>/images/implantes-consultorio.jpg</strong>
+              <span>Espaço reservado para fotografia do consultório odontológico</span>
+            </div>
+          </figure>
+        </div>
+        <div class="specialty-lead-body">
+          <span class="badge">Especialidade em destaque</span>
+          <h3>Odontologia — Implantes Dentários</h3>
+          <p>A odontologia é a base da Aliança Odontomédica, com atendimento voltado especialmente para implantes dentários. A clínica também oferece as demais especialidades listadas abaixo.</p>
+          <ul class="treatment-list">
+            <li class="is-highlight">Implantes Dentários</li>
+            <li>Ortodontia</li>
+            <li>Endodontia</li>
+            <li>Clínico-geral</li>
+            <li>Restauração</li>
+            <li>Limpeza</li>
+            <li>Clareamento</li>
+            <li>Lentes Dentais</li>
+            <li>Facetas Dentais</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="specialty-row" data-reveal>
+        <div class="specialty-col">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4a4 4 0 0 1 4 4v7a3 3 0 0 1-6 0"/><path d="M15 4a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4"/><circle cx="9" cy="18" r="1.4"/></svg>
+            Psicologia
+          </h4>
+          <ul>
+            <li>Atendimentos psicológicos</li>
+            <li>Terapia Cognitivo-Comportamental</li>
+          </ul>
+        </div>
+        <div class="specialty-col">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a4 4 0 0 1 4-4h1l3-3v14l-3-3H8a4 4 0 0 1-4-4z"/><path d="M16 9.5c1 .8 1 4.2 0 5"/></svg>
+            Fonoaudiologia
+          </h4>
+          <ul>
+            <li>Atendimentos fonoaudiológicos</li>
+          </ul>
+        </div>
+        <div class="specialty-col">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c2 2.5 4 5.2 4 8a4 4 0 1 1-8 0c0-2.8 2-5.5 4-8z"/></svg>
+            Estética
+          </h4>
+          <ul>
+            <li>Depilação LED</li>
+            <li>Criolipólise</li>
+            <li>Outros procedimentos estéticos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       IMPLANTES — SEÇÃO DE DESTAQUE
+       ========================================================= -->
+  <section class="section on-dark implants" id="implantes" aria-labelledby="implantes-title">
+    <div class="container implants-grid">
+      <div class="implants-copy" data-reveal>
+        <span class="eyebrow">Implantes Dentários</span>
+        <h2 class="section-title" id="implantes-title" style="margin-top:.8rem;">A especialidade em destaque da Aliança Odontomédica.</h2>
+        <hr class="divider">
+        <p>Os implantes dentários são indicados para repor dentes perdidos, ajudando a recuperar a função e a estética do sorriso. Na avaliação inicial, a equipe conversa com você para entender o seu caso e apresentar o melhor caminho de tratamento.</p>
+        <a class="btn btn-primary" href="https://wa.me/557399238796" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M20 4l-8 8"/></svg>
+          Quero saber mais
+        </a>
+      </div>
+      <div class="implants-media" data-reveal>
+        <div class="photo-frame">
+          <figure class="photo">
+            <img src="/images/implantes-01.jpg" alt="Procedimento de implante dentário realizado na Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l3 3-3 3-3-3z"/><path d="M12 9v9"/><path d="M9 18h6"/></svg>
+              <strong>/images/implantes-01.jpg</strong>
+              <span>Espaço reservado para fotografia da área de implantes</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ESTRUTURA / GALERIA
+       ========================================================= -->
+  <section class="section" id="estrutura" aria-labelledby="estrutura-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Nosso espaço</span>
+        <h2 class="section-title" id="estrutura-title" style="margin-top:.8rem;">Conheça nosso espaço</h2>
+        <hr class="divider">
+        <p class="section-lede">Um ambiente pensado para o seu conforto, da recepção aos consultórios.</p>
+      </div>
+
+      <div class="gallery" data-reveal>
+        <figure class="g-tall">
+          <div class="photo">
+            <img src="/images/recepcao-01.jpg" alt="Recepção da Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/></svg>
+              <strong>/images/recepcao-01.jpg</strong><span>Recepção</span>
+            </div>
+          </div>
+          <figcaption>Recepção</figcaption>
+        </figure>
+        <figure>
+          <div class="photo">
+            <img src="/images/consultorio-01.jpg" alt="Consultório odontológico da Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/></svg>
+              <strong>/images/consultorio-01.jpg</strong><span>Consultório</span>
+            </div>
+          </div>
+          <figcaption>Consultório odontológico</figcaption>
+        </figure>
+        <figure>
+          <div class="photo">
+            <img src="/images/equipamento-01.jpg" alt="Equipamento odontológico da Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/></svg>
+              <strong>/images/equipamento-01.jpg</strong><span>Equipamento</span>
+            </div>
+          </div>
+          <figcaption>Equipamentos</figcaption>
+        </figure>
+        <figure class="g-wide">
+          <div class="photo">
+            <img src="/images/clinica-01.jpg" alt="Ambiente interno da Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/></svg>
+              <strong>/images/clinica-01.jpg</strong><span>Ambiente da clínica</span>
+            </div>
+          </div>
+          <figcaption>Ambiente da clínica</figcaption>
+        </figure>
+        <figure>
+          <div class="photo">
+            <img src="/images/consultorio-02.jpg" alt="Consultório para atendimentos multidisciplinares" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/></svg>
+              <strong>/images/consultorio-02.jpg</strong><span>Consultório</span>
+            </div>
+          </div>
+          <figcaption>Consultório</figcaption>
+        </figure>
+        <figure>
+          <div class="photo">
+            <img src="/images/atendimento-01.jpg" alt="Momento de atendimento na Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/></svg>
+              <strong>/images/atendimento-01.jpg</strong><span>Atendimento</span>
+            </div>
+          </div>
+          <figcaption>Atendimento</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EQUIPE
+       ========================================================= -->
+  <section class="section on-alt" id="equipe" aria-labelledby="equipe-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Nossa equipe</span>
+        <h2 class="section-title" id="equipe-title" style="margin-top:.8rem;">Conheça nossa equipe</h2>
+        <hr class="divider">
+        <p class="section-lede">Um time dedicado às quatro frentes de cuidado da Aliança Odontomédica. Em breve, apresentaremos aqui cada profissional responsável pelo seu atendimento.</p>
+      </div>
+
+      <div class="team-grid" data-reveal>
+        <div class="team-card">
+          <div class="photo">
+            <img src="/images/equipe-odontologia.jpg" alt="Equipe de odontologia da Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1-3.5 4-5.5 7-5.5s6 2 7 5.5"/></svg>
+              <strong>/images/equipe-odontologia.jpg</strong>
+            </div>
+          </div>
+          <div class="team-card-body"><h3>Odontologia</h3><span>Equipe em breve</span></div>
+        </div>
+        <div class="team-card">
+          <div class="photo">
+            <img src="/images/equipe-psicologia.jpg" alt="Equipe de psicologia da Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1-3.5 4-5.5 7-5.5s6 2 7 5.5"/></svg>
+              <strong>/images/equipe-psicologia.jpg</strong>
+            </div>
+          </div>
+          <div class="team-card-body"><h3>Psicologia</h3><span>Equipe em breve</span></div>
+        </div>
+        <div class="team-card">
+          <div class="photo">
+            <img src="/images/equipe-fonoaudiologia.jpg" alt="Equipe de fonoaudiologia da Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1-3.5 4-5.5 7-5.5s6 2 7 5.5"/></svg>
+              <strong>/images/equipe-fonoaudiologia.jpg</strong>
+            </div>
+          </div>
+          <div class="team-card-body"><h3>Fonoaudiologia</h3><span>Equipe em breve</span></div>
+        </div>
+        <div class="team-card">
+          <div class="photo">
+            <img src="/images/equipe-estetica.jpg" alt="Equipe de estética da Aliança Odontomédica" onerror="this.classList.add('is-broken')">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1-3.5 4-5.5 7-5.5s6 2 7 5.5"/></svg>
+              <strong>/images/equipe-estetica.jpg</strong>
+            </div>
+          </div>
+          <div class="team-card-body"><h3>Estética</h3><span>Equipe em breve</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       DEPOIMENTOS
+       ========================================================= -->
+  <section class="section" id="depoimentos" aria-labelledby="depo-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Confiança</span>
+        <h2 class="section-title" id="depo-title" style="margin-top:.8rem;">O que dizem sobre nós</h2>
+        <hr class="divider">
+        <p class="section-lede">Em breve, reuniremos aqui relatos reais de pacientes atendidos na Aliança Odontomédica.</p>
+      </div>
+
+      <div class="testimonial-grid" data-reveal>
+        <div class="testimonial-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 8c-2 1-3 3-3 5.5 0 1.9 1.4 3.5 3 3.5s3-1.6 3-3.5c0-2.2-1.6-4-3-5.5z"/><path d="M16 8c-2 1-3 3-3 5.5 0 1.9 1.4 3.5 3 3.5s3-1.6 3-3.5c0-2.2-1.6-4-3-5.5z"/></svg>
+          <p>Espaço reservado para depoimento verificado de paciente.</p>
+          <small>Depoimento em atualização</small>
+        </div>
+        <div class="testimonial-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 8c-2 1-3 3-3 5.5 0 1.9 1.4 3.5 3 3.5s3-1.6 3-3.5c0-2.2-1.6-4-3-5.5z"/><path d="M16 8c-2 1-3 3-3 5.5 0 1.9 1.4 3.5 3 3.5s3-1.6 3-3.5c0-2.2-1.6-4-3-5.5z"/></svg>
+          <p>Espaço reservado para depoimento verificado de paciente.</p>
+          <small>Depoimento em atualização</small>
+        </div>
+        <div class="testimonial-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 8c-2 1-3 3-3 5.5 0 1.9 1.4 3.5 3 3.5s3-1.6 3-3.5c0-2.2-1.6-4-3-5.5z"/><path d="M16 8c-2 1-3 3-3 5.5 0 1.9 1.4 3.5 3 3.5s3-1.6 3-3.5c0-2.2-1.6-4-3-5.5z"/></svg>
+          <p>Espaço reservado para depoimento verificado de paciente.</p>
+          <small>Depoimento em atualização</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       INSTAGRAM
+       ========================================================= -->
+  <section class="section on-dark" id="instagram" aria-labelledby="insta-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Redes sociais</span>
+        <h2 class="section-title" id="insta-title" style="margin-top:.8rem;">Acompanhe a Aliança Odontomédica</h2>
+        <hr class="divider">
+        <p class="section-lede">Bastidores, procedimentos e novidades da clínica, publicados no perfil oficial do Instagram.</p>
+      </div>
+
+      <div class="insta-grid" data-reveal>
+        <div class="insta-item">
+          <div class="photo"><img src="/images/instagram-01.jpg" alt="Publicação do Instagram da Aliança Odontomédica" onerror="this.classList.add('is-broken')"><div class="photo-fallback"><strong>/images/instagram-01.jpg</strong></div></div>
+          <a href="https://www.instagram.com/aliancaodontomedica/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+        <div class="insta-item">
+          <div class="photo"><img src="/images/instagram-02.jpg" alt="Publicação do Instagram da Aliança Odontomédica" onerror="this.classList.add('is-broken')"><div class="photo-fallback"><strong>/images/instagram-02.jpg</strong></div></div>
+          <a href="https://www.instagram.com/aliancaodontomedica/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+        <div class="insta-item">
+          <div class="photo"><img src="/images/instagram-03.jpg" alt="Publicação do Instagram da Aliança Odontomédica" onerror="this.classList.add('is-broken')"><div class="photo-fallback"><strong>/images/instagram-03.jpg</strong></div></div>
+          <a href="https://www.instagram.com/aliancaodontomedica/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+        <div class="insta-item">
+          <div class="photo"><img src="/images/instagram-04.jpg" alt="Publicação do Instagram da Aliança Odontomédica" onerror="this.classList.add('is-broken')"><div class="photo-fallback"><strong>/images/instagram-04.jpg</strong></div></div>
+          <a href="https://www.instagram.com/aliancaodontomedica/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+        <div class="insta-item">
+          <div class="photo"><img src="/images/instagram-05.jpg" alt="Publicação do Instagram da Aliança Odontomédica" onerror="this.classList.add('is-broken')"><div class="photo-fallback"><strong>/images/instagram-05.jpg</strong></div></div>
+          <a href="https://www.instagram.com/aliancaodontomedica/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+        <div class="insta-item">
+          <div class="photo"><img src="/images/instagram-06.jpg" alt="Publicação do Instagram da Aliança Odontomédica" onerror="this.classList.add('is-broken')"><div class="photo-fallback"><strong>/images/instagram-06.jpg</strong></div></div>
+          <a href="https://www.instagram.com/aliancaodontomedica/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+      </div>
+
+      <div class="insta-cta">
+        <span class="insta-handle">@aliancaodontomedica</span>
+        <a class="btn btn-outline" href="https://www.instagram.com/aliancaodontomedica/" target="_blank" rel="noopener">Ver Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       LOCALIZAÇÃO
+       ========================================================= -->
+  <section class="section on-alt" id="localizacao" aria-labelledby="local-title">
+    <div class="container location-grid">
+      <div data-reveal>
+        <span class="eyebrow">Como chegar</span>
+        <h2 class="section-title" id="local-title" style="margin-top:.8rem;">Estamos em Ipiaú</h2>
+        <hr class="divider">
+
+        <div class="location-info">
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-5.7-6.5-11A6.5 6.5 0 0 1 12 3.5 6.5 6.5 0 0 1 18.5 10c0 5.3-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            <div><strong>Endereço</strong><span>R. Juraci Magalhães, 80 - Centro, Ipiaú - BA, 45570-000</span></div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div><strong>Horário de atendimento</strong><span>08:00 às 18:00</span></div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M20 4l-8 8"/></svg>
+            <div><strong>WhatsApp</strong><span>+55 73 9923-8796</span></div>
+          </div>
+        </div>
+
+        <a class="btn btn-outline-dark" style="margin-top:2rem;" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.%20Juraci%20Magalh%C3%A3es%2C%2080%20-%20Centro%2C%20Ipia%C3%BA%20-%20BA%2C%2045570-000" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+
+      <div class="map-frame" data-reveal>
+        <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.5284351642234!2d-39.7423315!3d-14.1330953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x738d21b3a3c2025%3A0x86b0da3e9e3e3e3!2sR.%20Juracy%20Magalh%C3%A3es%2C%2080%20-%20Centro%2C%20Ipia%C3%BA%20-%20BA%2C%2045570-000!5e0!3m2!1wpt-BR!2sbr!4v1710000000000!5m2!1wpt-BR!2sbr" 
+  width="100%" 
+  height="100%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade"
+  title="Mapa de localização da Aliança Odontomédica em Ipiaú">
+</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTATO / CONVERSÃO FINAL
+       ========================================================= -->
+  <section class="section on-dark" id="contato" aria-labelledby="contato-title">
+    <div class="container contact-grid">
+      <div data-reveal>
+        <span class="eyebrow">Fale conosco</span>
+        <h2 class="section-title" id="contato-title" style="margin-top:.8rem;">Seu próximo cuidado começa aqui.</h2>
+        <hr class="divider">
+        <p class="section-lede">Fale com a Sara, do setor de agendamento, e encontre o melhor horário para o seu atendimento na Aliança Odontomédica.</p>
+
+        <div class="contact-list">
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M20 4l-8 8"/></svg>
+            <div><strong style="color:var(--branco)">WhatsApp</strong><span>+55 73 9923-8796</span></div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1-3.5 4-5.5 7-5.5s6 2 7 5.5"/></svg>
+            <div><strong style="color:var(--branco)">Agendamento</strong><span>Sara — Setor de Agendamento</span></div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div><strong style="color:var(--branco)">Horário</strong><span>08:00 às 18:00</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-panel" data-reveal>
+        <h3>Agende seu atendimento</h3>
+        <p>Envie uma mensagem pelo WhatsApp e a nossa equipe retorna com os melhores horários disponíveis.</p>
+        <a class="btn btn-primary" href="https://wa.me/557399238796" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M20 4l-8 8"/></svg>
+          Agendar atendimento
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>Aliança Odontomédica</strong>
+        <p>Odontologia • Psicologia • Fonoaudiologia • Estética</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/557399238796" target="_blank" rel="noopener">+55 73 9923-8796</a></li>
+          <li><a href="https://www.instagram.com/aliancaodontomedica/" target="_blank" rel="noopener">@aliancaodontomedica</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Endereço</h4>
+        <ul>
+          <li>R. Juraci Magalhães, 80</li>
+          <li>Centro, Ipiaú - BA</li>
+          <li>45570-000</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <ul>
+          <li>08:00 às 18:00</li>
+          <li>Agendamento: Sara</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Aliança Odontomédica. Todos os direitos reservados.</span>
+      <span>Ipiaú — Bahia</span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     WHATSAPP FLUTUANTE
+     ========================================================= -->
+<div class="wa-float">
+  <span class="tooltip">Fale com nossa equipe</span>
+  <a class="wa-btn" href="https://wa.me/557399238796" target="_blank" rel="noopener" aria-label="Fale com nossa equipe pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.7 9.3 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2z"/></svg>
+  </a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // Ano dinâmico no rodapé
+  var yearEl = document.getElementById('year');
+  if(yearEl){ yearEl.textContent = new Date().getFullYear(); }
+
+  // Header: estado "scrolled"
+  var header = document.getElementById('siteHeader');
+  var toggleHeader = function(){
+    if(window.scrollY > 30){ header.classList.add('is-scrolled'); }
+    else{ header.classList.remove('is-scrolled'); }
+  };
+  toggleHeader();
+  window.addEventListener('scroll', toggleHeader, { passive:true });
+
+  // Menu mobile
+  var hamburger = document.getElementById('hamburgerBtn');
+  var panel = document.getElementById('mobilePanel');
+
+  function openMenu(){
+    panel.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded','true');
+    hamburger.setAttribute('aria-label','Fechar menu');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu(){
+    panel.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Abrir menu');
+    document.body.style.overflow = '';
+  }
+  hamburger.addEventListener('click', function(){
+    var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+    if(isOpen){ closeMenu(); } else { openMenu(); }
+  });
+  panel.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeMenu(); }
+  });
+
+  // Revelação suave ao rolar
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window && revealEls.length){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+</body>
+</html>
